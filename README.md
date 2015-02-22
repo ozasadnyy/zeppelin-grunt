@@ -1,6 +1,8 @@
 Grunt version of Project Zeppelin
 =============
 
+### Live demo http://ozasadnyy.github.io/zeppelin-grunt/
+
 Original project you can find [here](https://github.com/gdg-x/zeppelin).
 
 1.  Install [Node.js](www.nodejs.org) and [Ruby](https://www.ruby-lang.org/)
