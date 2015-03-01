@@ -23,6 +23,11 @@ organizerLink: "http://lviv.gdg.org.ua/"
 c4pUrl: "http://bit.ly/dfua-c4p"
 c4pButton: "Become a speaker"
 
+# Varibles
+googleAnalyticsTrackingId: ""
+webtoolsSiteVerification: ""
+disqusShortName: "devfestua"
+
 # i18n
 languages:
   en: English

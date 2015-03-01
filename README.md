@@ -4,9 +4,9 @@ Grunt version of Project Zeppelin / GDG DevFest 2014 site template
 ### About 
 Project Zeppelin allows you to setup awesome GDG DevFest site in 5 minutes. 
 
-Grunt version of this project allows you to get easier more optimized site. Several commands will give you pleasure during development. Furthermore, now project supports i18n.
+Grunt version of this project allows you to get easier more optimized site. Several commands will simplify development process. Furthermore, now project supports i18n.
 
-Original project you can find [here](https://github.com/gdg-x/zeppelin).
+You can find original project [here](https://github.com/gdg-x/zeppelin).
 
 Template is brought by [GDG Lviv](http://lviv.gdg.org.ua/) team.
 
@@ -54,7 +54,7 @@ permalink: '/blog/:title'
 ...
 ```
 
-**Now you are ready for development**. There are available next commands:
+**Now you are ready for development**. Following commands are available:
 
 1.  `grunt` (by default it runs `grunt serve`) - build and start your site for **development** (with livereload, js uglifing and sass compilation) 
 2.  `grunt serve:dist` - build and start your site with **production** configs (this is how it will look online)
