@@ -17,4 +17,4 @@ If someone is bothering you, please tell GDG Organizers immediately and they wil
 
 - Vitaliy Zasadnyy, +38 063 863 20 62, [vitaliy.zasadnyy@gdg.org.ua](mailto:vitaliy.zasadnyy@gdg.org.ua)
 
-<img class="img-responsive feature-image" src="{{ site.baseurl }}/img/posts/cod.jpg" style="display:none">
+<img class="img-responsive feature-image" src="{{ site.baseurl_root }}/img/posts/cod.jpg" style="display:none">
