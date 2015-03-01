@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-    // Show elapsed time after tasks run
     require('time-grunt')(grunt);
-    // Load all Grunt tasks
     require('jit-grunt')(grunt, {
         buildcontrol: 'grunt-build-control'
         });
@@ -12,7 +10,8 @@ module.exports = function(grunt) {
         app: {
             source: 'app',
             dist: 'dist',
-            baseurl: 'zeppelin-grunt'
+            baseurl: 'zeppelin-grunt',
+            git_repo: 'git@github.com:ozasadnyy/zeppelin-grunt.git'
         },
         watch: {
             sass: {
@@ -20,13 +19,11 @@ module.exports = function(grunt) {
                 tasks: ['sass:server', 'autoprefixer']
             },
             scripts: {
-                files: ['<%= app.source %>/_assets/js/**/*.{js}'],
+                files: ['<%= app.source %>/_assets/js/**/*'],
                 tasks: ['uglify:server']
             },
             jekyll: {
-                files: [
-                    '<%= app.source %>/**/*.{html,yml,md,mkd,markdown}'
-                ],
+                files: ['<%= app.source %>/**/*.{html,yml,md,mkd,markdown}'],
                 tasks: ['jekyll:server']
             },
             images: {
@@ -38,7 +35,6 @@ module.exports = function(grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '.jekyll/**/*.{html,yml,md,mkd,markdown}',
                     '.tmp/<%= app.baseurl %>/css/*.css',
                     '.tmp/<%= app.baseurl %>/js/*.js',
                     '.tmp/<%= app.baseurl %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
@@ -97,15 +93,15 @@ module.exports = function(grunt) {
                 config: '_config.yml,_config.build.yml',
                 src: '<%= app.source %>'
             },
-            dist: {
-                options: {
-                    dest: '<%= app.dist %>/<%= app.baseurl %>',
-                }
-            },
             server: {
                 options: {
                     config: '_config.yml',
                     dest: '.jekyll/<%= app.baseurl %>'
+                }
+            },
+            dist: {
+                options: {
+                    dest: '<%= app.dist %>/<%= app.baseurl %>',
                 }
             }
         },
@@ -174,7 +170,8 @@ module.exports = function(grunt) {
             options: {
                 includePaths: [
                     'bower_components/animate-sass',
-                    'bower_components/bootstrap-sass/assets/stylesheets'
+                    'bower_components/bootstrap-sass/assets/stylesheets',
+                    'bower_components/waves/src/scss'
                 ]
             },
             server: {
@@ -200,31 +197,6 @@ module.exports = function(grunt) {
                     dest: '<%= app.dist %>/<%= app.baseurl %>/css',
                     ext: '.css'
                 }]
-            }
-        },
-        uncss: {
-            options: {
-                ignore: [
-                    '.visible',
-                    '.top-header.after-scroll',
-                    '.logo-dark',
-                    '.bottom-navlinks-small',
-                    '.right-nav-button-hidden',
-                    '.stick-label',
-                    '.scrollable',
-                    '.enable-overlay',
-                    '.slider-current-item',
-                    '.location-active',
-                    '.tweet',
-                    '.tweet-text',
-                    '.tweet-meta'
-                ],
-                htmlroot: '<%= app.dist %>',
-                report: 'gzip'
-            },
-            dist: {
-                src: '<%= app.dist %>/<%= app.baseurl %>/**/*.html',
-                dest: '<%= app.dist %>/<%= app.baseurl %>/css/main.css'
             }
         },
         autoprefixer: {
@@ -324,7 +296,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     dir: '<%= app.dist %>/<%= app.baseurl %>',
-                    remote: 'git@github.com:ozasadnyy/zeppelin-grunt.git',
+                    remote: '<%= app.git_repo %>',
                     branch: 'gh-pages',
                     commit: true,
                     push: true,

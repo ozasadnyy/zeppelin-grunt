@@ -12,6 +12,7 @@ offers:
   ticketContentList: ["Lorem ipsum is simply", "Dummy text of the printing", "Typesetting industry"]
   validFrom: "2014-08-25T10:00"
   validThrough: "2014-09-30T23:59"
+  info: "Before 30 September 2014 23:59 or 150 tickets"
  -
   name: "Last Chance"
   price: "450"
@@ -24,7 +25,9 @@ offers:
   ticketContentList: ["Lorem ipsum is simply", "Dummy text of the printing", "Typesetting industry"]
   validFrom: "2014-10-01T00:00"
   validThrough: "2014-10-23T23:59"
+  info: "450 tickets"
   disabled: true
+  fallback: "Ticket sales will begin on 1 October 2014 00:00"
  -
   name: "Student"
   price: "200"
@@ -36,5 +39,6 @@ offers:
   ticketContentList: ["Lorem ipsum is simply", "Dummy text of the printing", "Typesetting industry"]
   validFrom: "2014-08-20T10:00"
   validThrough: "2014-10-23T23:59"
+  info: "Before 23 October 2014 23:59 or 50 tickets"
   soldOut: true
   soldOutText: "Sold Out"

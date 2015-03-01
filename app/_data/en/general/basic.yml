@@ -22,3 +22,8 @@ organizerLink: "http://lviv.gdg.org.ua/"
 # Documents
 c4pUrl: "http://bit.ly/dfua-c4p"
 c4pButton: "Become a speaker"
+
+# i18n
+languages:
+  en: English
+  uk: Українська

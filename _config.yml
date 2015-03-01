@@ -14,7 +14,11 @@ baseurl: "/zeppelin-grunt"
 url: "http://gdg-x.github.io"
 permalink: '/blog/:title'
 
+# i18n
+languages: ["en", "uk"]
+exclude_from_localizations: ["js", "img", "css"]
+
 # Varibles
-googleAnalyticsTrackingId: "UA-43643469-5"
-webtoolsSiteVerification: "b9imDOrFawXaBXCC4r3uJDdswSYcalD-wWpMYhFq-no"
+googleAnalyticsTrackingId: ""
+webtoolsSiteVerification: ""
 disqusShortName: "devfestua"
